@@ -62,8 +62,6 @@
       pkgs.buildEnv {
         name = "homepkgs";
         paths = with pkgs; [
-          autoconf      # auto configuration for c/c++ projects
-          automake      # automake for c/c++ projects
           bat           # cat, with colorization
           binutils      # gnu binary utils (ld, strip, objdump, strings, etc.
           bloaty        # bloaty mcbloatface - shows bloat in executables
