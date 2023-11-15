@@ -73,7 +73,6 @@
           firejail      # provides jailing for processes
           gron          # json transformation so you can grep it
           hadolint      # Dockerfile linter
-          hugo          # static site generator TODO: use nix develop for this!
           hyperfine     # benchmarking utility
           inotify-tools # command line access to inotify interface
           jq            # json parser
