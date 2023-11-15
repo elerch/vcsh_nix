@@ -18,14 +18,37 @@
 
         graphicalAndHeavyPackages = with pkgs; [
           # Heavier weight stuff and things that use x
+          asciinema     # terminal screen recordings
+          aws-vault     # manage multiple aws profiles
+          awscli2       # aws cli, version 2
+          crun          # container runner for podman/docker, written in c
           dunst         # notification daemon
+          extract_url   # extracts urls from text. A bit buggy
+          feh           # image viewer - good for background images
+          ffmpeg        # video manipulation
+          gdb           # gnu debugger
+          htop          # htop, a better top
+          imagemagick   # image manipulation
+          khard         # interface to carddav data
+          lsix          # image thumbnails in terminal via six
+          mitmproxy     # man in the middle proxy - proxy all the things
+          neofetch      # system information
+          neomutt       # mutt for a new generation
+          pandoc        # swiss army knife of document translation
           playerctl     # media controls
           qemu          # virtual machine
           maim          # X screenshot utility
           mlterm        # terminal emulator
+          ntfy          # ntfy client/server
+          rclone        # clone files to/from cloud providers
           rofi          # Window switcher/dmenu replacement
+          screen        # screen manager
+          syncthing     # syncthing syncs all the things
+          tmux          # terminal multiplexer
           # vlc          # video player - use flatpak instead
+          w3m           # w3m browser
           xclip         # manage x clipboard
+          yt-dlp        # download video from the Internet
 
           # It's complicated...
           # hack-font nix isn't the best way to install this
@@ -39,50 +62,39 @@
       pkgs.buildEnv {
         name = "homepkgs";
         paths = with pkgs; [
-          asciinema     # terminal screen recordings
           autoconf      # auto configuration for c/c++ projects
           automake      # automake for c/c++ projects
-          aws-vault     # manage multiple aws profiles
-          awscli2       # aws cli, version 2
           bat           # cat, with colorization
           binutils      # gnu binary utils (ld, strip, objdump, strings, etc.
           bloaty        # bloaty mcbloatface - shows bloat in executables
-          crun          # container runner for podman/docker, written in c
+          cloudflared   # create tunnels to cloudflare
+          cosign        # sign container images
           eza           # a better ls
-          extract_url   # extracts urls from text. A bit buggy
-          feh           # image viewer - good for background images
-          ffmpeg        # video manipulation
           firejail      # provides jailing for processes
-          gdb           # gnu debugger
           gron          # json transformation so you can grep it
-          htop          # htop, a better top
+          hadolint      # Dockerfile linter
           hugo          # static site generator TODO: use nix develop for this!
           hyperfine     # benchmarking utility
-          imagemagick   # image manipulation
           inotify-tools # command line access to inotify interface
           jq            # json parser
-          khard         # interface to carddav data
-          lsix          # image thumbnails in terminal via six
-          mitmproxy     # man in the middle proxy - proxy all the things
           mold          # multi-threaded linker
-          neofetch      # system information
-          neomutt       # mutt for a new generation
+          neovim        # neovim
           nettools      # ifconfig, netstat and the like
           netcat        # netcat provides nc
           nmap          # nmap port scanning, etc
           p7zip         # 7z executable
-          pandoc        # swiss army knife of document translation
           qpdf          # PDF translations
+          rekor-cli     # CLI client for signature transparency log
           rsync         # sync files from one place to another through CLI
-          screen        # screen manager
+          shellcheck    # shell script linter
           sqlite        # sqlite database
-          syncthing     # syncthing syncs all the things
-          tmux          # terminal multiplexer
           tree          # file listings as a tree
           unzip         # unzip utility
           wasmtime      # run wasm (wasi) binaries
-          w3m           # w3m browser
+          websocat      # web sockets from command line
+          yaml2json     # convert yaml to json
           zip           # zip utility
+          zls           # zig language server
           zstd          # zstd compression algorithm
         ] ++ additionalPackages;
         pathsToLink = [ "/share/man" "/share/doc" "/bin" "/lib" ];

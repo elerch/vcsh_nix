@@ -1,0 +1,9 @@
+#!/bin/sh
+
+for pkg in $(grep '[a-zA-Z0-9-]\+ *#' "$HOME/.nix-flake/flake.nix" |grep -v '# vlc' |awk '{print $1}'); do
+  if [ "$pkg" = "asciinema" ]; then
+    echo '^^^^^^^^^^ Heavy and Graphical Packages ^^^^^^^^^'
+    echo 'vvvvvvvvvv Lighter cli packages         vvvvvvvvv'
+  fi
+  echo "$pkg" size = "$(nix path-info -rS --impure --expr 'import <nixpkgs> {}' "$pkg" |sort -uf |xargs du -ch 2>/dev/null|tail -1)"
+done
