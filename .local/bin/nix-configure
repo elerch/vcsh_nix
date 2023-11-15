@@ -1,0 +1,22 @@
+#!/bin/sh
+# See https://jvns.ca/blog/2023/11/11/notes-on-nix-flakes/
+
+# Problem 2 from the post. Does not apply
+# export NIXPKGS_ALLOW_UNFREE=1
+cd ~/.nix-flake || exit
+
+if [ -z "$1" ]; then
+  echo "No arguments specified, installing only light command line tools"
+  echo "to install large packages and those dependent on a window environment"
+  echo "use --full. To suppress this message, use --cli"
+fi
+
+NIX_CONFIGURE_FULL=0
+if [ "$1" = "--full" ]; then
+  NIX_CONFIGURE_FULL=1
+fi
+
+# This is problem 3 in the post above. Does not currently apply
+#rm flake.lock
+NIX_CONFIGURE_FULL=$NIX_CONFIGURE_FULL \
+  nix build --impure --out-link ~/.nix-flake/local
