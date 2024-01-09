@@ -56,6 +56,7 @@
           podman        # user mode container stuff
                         # because docker may be on the machine, we probably
                         # don't want this everywhere
+          podman-compose
         ];
         additionalPackages = if includeGraphical then graphicalAndHeavyPackages else [];
       in
