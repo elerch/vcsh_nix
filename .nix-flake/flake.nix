@@ -39,7 +39,7 @@
           qemu          # virtual machine
           maim          # X screenshot utility
           mlterm        # terminal emulator
-          ntfy          # ntfy client/server
+          ntfy-sh       # ntfy client/server
           rclone        # clone files to/from cloud providers
           rofi          # Window switcher/dmenu replacement
           screen        # screen manager
