@@ -8,13 +8,22 @@
 
       # Nixpkgs instantiated for supported system types.
       nixpkgsFor = forAllSystems (system: import nixpkgs { inherit system; });
+
     in
     {
     defaultPackage = forAllSystems (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
 
-        includeGraphical = builtins.getEnv "NIX_CONFIGURE_FULL" == "1";
+        hostConfig = if builtins.pathExists ./host-config.nix
+          then import ./host-config.nix { pkgs = pkgs; }
+          else {
+            hostPackages = [];
+            basePackages = "";
+          };
+
+        includeGraphical = builtins.getEnv "NIX_CONFIGURE_FULL" == "1" ||
+          hostConfig.basePackages == "full";
 
         graphicalAndHeavyPackages = with pkgs; [
           # Heavier weight stuff and things that use x
@@ -94,7 +103,7 @@
           zip           # zip utility
           zls           # zig language server
           zstd          # zstd compression algorithm
-        ] ++ additionalPackages;
+        ] ++ additionalPackages ++ hostConfig.hostPackages;
         pathsToLink = [ "/share/man" "/share/doc" "/bin" "/lib" ];
         extraOutputsToInstall = [ "man" "doc" ];
       });
