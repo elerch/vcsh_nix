@@ -4,10 +4,23 @@
 # Problem 2 from the post. Does not apply
 # export NIXPKGS_ALLOW_UNFREE=1
 
-if [ -z "$1" ]; then
-  echo "No arguments specified, installing only light command line tools"
+if [ -z "$1" ] && [ ! -r "$HOME/.nix-flake/host-config.nix" ]; then
+  echo "No arguments specified and no host config, installing only light command line tools"
   echo "to install large packages and those dependent on a window environment"
   echo "use --full. To suppress this message, use --cli"
+  echo ""
+  echo "To establish host configuration, add a \"host-config.nix\" to $HOME/.nix-flake"
+  echo "with contents along this lines of this:"
+  echo ""
+  echo '{ pkgs ? import <nixpkgs> {} }:'
+  echo ''
+  echo '{'
+  echo '  basePackages = "full"; # Can be "full" or just "" for light command tools'
+  echo ''
+  echo '  hostPackages = with pkgs; ['
+  echo '    # your package list here'
+  echo '  ];'
+  echo '}'
 fi
 
 NIX_CONFIGURE_FULL=0
