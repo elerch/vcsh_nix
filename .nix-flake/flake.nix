@@ -77,6 +77,7 @@
           bloaty        # bloaty mcbloatface - shows bloat in executables
           cloudflared   # create tunnels to cloudflare
           cosign        # sign container images
+          delta         # fancy diff
           eza           # a better ls
           firejail      # provides jailing for processes
           gron          # json transformation so you can grep it
@@ -97,7 +98,7 @@
           sqlite        # sqlite database
           tree          # file listings as a tree
           unzip         # unzip utility
-          wasmtime      # run wasm (wasi) binaries
+          #wasmtime      # run wasm (wasi) binaries - does not seem to work properly
           websocat      # web sockets from command line
           yaml2json     # convert yaml to json
           zip           # zip utility
