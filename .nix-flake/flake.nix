@@ -85,6 +85,7 @@
           hyperfine     # benchmarking utility
           inotify-tools # command line access to inotify interface
           jq            # json parser
+          khal          # command line calendar stuff
           mold          # multi-threaded linker
           neovim        # neovim
           nettools      # ifconfig, netstat and the like
@@ -96,6 +97,7 @@
           rsync         # sync files from one place to another through CLI
           shellcheck    # shell script linter
           sqlite        # sqlite database
+          tor           # Access tor network (cli - not the browser)
           tree          # file listings as a tree
           unzip         # unzip utility
           #wasmtime      # run wasm (wasi) binaries - does not seem to work properly
