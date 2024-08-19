@@ -73,6 +73,7 @@
         name = "homepkgs";
         paths = with pkgs; [
           bat           # cat, with colorization
+          btop          # better top
           binutils      # gnu binary utils (ld, strip, objdump, strings, etc.
           bloaty        # bloaty mcbloatface - shows bloat in executables
           cloudflared   # create tunnels to cloudflare
