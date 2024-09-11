@@ -85,6 +85,7 @@
           hadolint      # Dockerfile linter
           hyperfine     # benchmarking utility
           inotify-tools # command line access to inotify interface
+          jless         # less for json
           jq            # json parser
           khal          # command line calendar stuff
           mold          # multi-threaded linker
