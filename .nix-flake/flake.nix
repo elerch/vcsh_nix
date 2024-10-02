@@ -40,7 +40,7 @@
           khard         # interface to carddav data
           lsix          # image thumbnails in terminal via six
           mitmproxy     # man in the middle proxy - proxy all the things
-          neofetch      # system information
+          fastfetch     # system information
           neomutt       # mutt for a new generation
           pandoc        # swiss army knife of document translation
           playerctl     # media controls
