@@ -54,6 +54,7 @@
           screen        # screen manager
           syncthing     # syncthing syncs all the things
           tmux          # terminal multiplexer
+          toot          # mastodon cli/tli interface
           # vlc          # video player - use flatpak instead
           w3m           # w3m browser
           xclip         # manage x clipboard
