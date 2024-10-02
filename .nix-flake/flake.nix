@@ -52,7 +52,6 @@
           rofi          # Window switcher/dmenu replacement
           screen        # screen manager
           syncthing     # syncthing syncs all the things
-          tmux          # terminal multiplexer
           toot          # mastodon cli/tli interface
           # vlc          # video player - use flatpak instead
           w3m           # w3m browser
@@ -106,6 +105,7 @@
           #wasmtime      # run wasm (wasi) binaries - does not seem to work properly
           websocat      # web sockets from command line
           yaml2json     # convert yaml to json
+          zellij        # terminal multiplexer
           zip           # zip utility
           zls           # zig language server
           zstd          # zstd compression algorithm
