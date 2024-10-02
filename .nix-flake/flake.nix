@@ -36,7 +36,6 @@
           feh           # image viewer - good for background images
           ffmpeg        # video manipulation
           gdb           # gnu debugger
-          htop          # htop, a better top
           imagemagick   # image manipulation
           khard         # interface to carddav data
           lsix          # image thumbnails in terminal via six
@@ -84,6 +83,7 @@
           firejail      # provides jailing for processes
           gron          # json transformation so you can grep it
           hadolint      # Dockerfile linter
+          htop          # htop, a better top (concerned btop won't work everywhere)
           hyperfine     # benchmarking utility
           inotify-tools # command line access to inotify interface
           jless         # less for json
