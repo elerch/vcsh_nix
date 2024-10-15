@@ -1,6 +1,9 @@
 {
-  inputs.nixpkgs.url = "nixpkgs/nixpkgs-unstable";
-  outputs = { self, nixpkgs }:
+  inputs = {
+    nixpkgs.url = "nixpkgs/nixpkgs-unstable";
+    lerchclipboard.url = "git+https://git.lerch.org/lobo/clipboard-flake.git";
+  };
+  outputs = { self, nixpkgs, lerchclipboard }:
     let
       supportedSystems = [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ];
       # Helper function to generate an attrset '{ x86_64-linux = f "x86_64-linux"; ... }'.
@@ -57,6 +60,9 @@
           w3m           # w3m browser
           xclip         # manage x clipboard
           yt-dlp        # download video from the Internet
+
+          # Personal stuff, using X
+          lerchclipboard.packages.${system}.default
 
           # It's complicated...
           # hack-font nix isn't the best way to install this
