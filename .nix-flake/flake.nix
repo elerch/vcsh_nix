@@ -77,6 +77,7 @@
       pkgs.buildEnv {
         name = "homepkgs";
         paths = with pkgs; [
+          any-nix-shell # any-nix-shell
           bat           # cat, with colorization
           btop          # better top
           binutils      # gnu binary utils (ld, strip, objdump, strings, etc.
@@ -84,6 +85,7 @@
           cloudflared   # create tunnels to cloudflare
           cosign        # sign container images
           delta         # fancy diff
+          direnv        # direnv
           eza           # a better ls
           firejail      # provides jailing for processes
           gron          # json transformation so you can grep it
@@ -113,7 +115,6 @@
           yaml2json     # convert yaml to json
           zellij        # terminal multiplexer
           zip           # zip utility
-          zls           # zig language server
           zstd          # zstd compression algorithm
         ] ++ additionalPackages ++ hostConfig.hostPackages;
         pathsToLink = [ "/share/man" "/share/doc" "/bin" "/lib" ];
