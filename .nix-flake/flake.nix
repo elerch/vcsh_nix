@@ -88,6 +88,7 @@
           direnv        # direnv
           eza           # a better ls
           firejail      # provides jailing for processes
+          git           # make sure we get the git version we want
           gron          # json transformation so you can grep it
           hadolint      # Dockerfile linter
           htop          # htop, a better top (concerned btop won't work everywhere)
