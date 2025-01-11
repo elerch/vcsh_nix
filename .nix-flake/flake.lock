@@ -18,10 +18,28 @@
         "type": "github"
       }
     },
+    "lerchchawan": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1736614458,
+        "narHash": "sha256-ActD2UmVo/fxwFzEGftZjvl8/QpBYreqrUC/nQ8htYM=",
+        "ref": "refs/heads/master",
+        "rev": "926bf118f2b34b53b209d49851f39974bd436f87",
+        "revCount": 2,
+        "type": "git",
+        "url": "https://git.lerch.org/lobo/chawan-flake.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.lerch.org/lobo/chawan-flake.git"
+      }
+    },
     "lerchclipboard": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs_2"
       },
       "locked": {
         "lastModified": 1728966859,
@@ -39,6 +57,21 @@
     },
     "nixpkgs": {
       "locked": {
+        "lastModified": 1736344531,
+        "narHash": "sha256-8YVQ9ZbSfuUk2bUf2KRj60NRraLPKPS0Q4QFTbc+c2c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "bffc22eb12172e6db3c5dde9e3e5628f8e3e7912",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
         "lastModified": 1728492678,
         "narHash": "sha256-9UTxR8eukdg+XZeHgxW5hQA9fIKHsKCdOIUycTryeVw=",
         "owner": "NixOS",
@@ -53,7 +86,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1728279793,
         "narHash": "sha256-W3D5YpNrUVTFPVU4jiEiboaaUDShaiH5fRl9aJLqUnU=",
@@ -70,8 +103,9 @@
     },
     "root": {
       "inputs": {
+        "lerchchawan": "lerchchawan",
         "lerchclipboard": "lerchclipboard",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_3"
       }
     },
     "systems": {

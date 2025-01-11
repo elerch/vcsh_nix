@@ -2,8 +2,9 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixpkgs-unstable";
     lerchclipboard.url = "git+https://git.lerch.org/lobo/clipboard-flake.git";
+    lerchchawan.url = "git+https://git.lerch.org/lobo/chawan-flake.git";
   };
-  outputs = { self, nixpkgs, lerchclipboard }:
+  outputs = { self, nixpkgs, lerchclipboard, lerchchawan }:
     let
       supportedSystems = [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ];
       # Helper function to generate an attrset '{ x86_64-linux = f "x86_64-linux"; ... }'.
@@ -57,7 +58,6 @@
           syncthing     # syncthing syncs all the things
           toot          # mastodon cli/tli interface
           # vlc          # video player - use flatpak instead
-          w3m           # w3m browser
           xclip         # manage x clipboard
           yt-dlp        # download video from the Internet
 
@@ -82,6 +82,7 @@
           btop          # better top
           binutils      # gnu binary utils (ld, strip, objdump, strings, etc.
           bloaty        # bloaty mcbloatface - shows bloat in executables
+          lerchchawan.packages.${system}.default # Chawan appimage
           cloudflared   # create tunnels to cloudflare
           cosign        # sign container images
           delta         # fancy diff
