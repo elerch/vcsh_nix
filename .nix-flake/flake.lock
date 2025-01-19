@@ -23,11 +23,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1736614458,
-        "narHash": "sha256-ActD2UmVo/fxwFzEGftZjvl8/QpBYreqrUC/nQ8htYM=",
+        "lastModified": 1737254011,
+        "narHash": "sha256-iN2jil4o4yR4VTsQrm4bCBAWJ7GiZugSJonOvIJBGFQ=",
         "ref": "refs/heads/master",
-        "rev": "926bf118f2b34b53b209d49851f39974bd436f87",
-        "revCount": 2,
+        "rev": "80ee77aa8374c8172feafa8436fc09e2816e2594",
+        "revCount": 3,
         "type": "git",
         "url": "https://git.lerch.org/lobo/chawan-flake.git"
       },
@@ -88,11 +88,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1728279793,
-        "narHash": "sha256-W3D5YpNrUVTFPVU4jiEiboaaUDShaiH5fRl9aJLqUnU=",
+        "lastModified": 1737003892,
+        "narHash": "sha256-RCzJE9wKByLCXmRBp+z8LK9EgdW+K+W/DXnJS4S/NVo=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "f85a2d005e83542784a755ca8da112f4f65c4aa4",
+        "rev": "ae06b9c2d83cb5c8b12d7d0e32692e93d1379713",
         "type": "github"
       },
       "original": {
