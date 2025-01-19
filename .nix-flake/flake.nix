@@ -3,8 +3,9 @@
     nixpkgs.url = "nixpkgs/nixpkgs-unstable";
     lerchclipboard.url = "git+https://git.lerch.org/lobo/clipboard-flake.git";
     lerchchawan.url = "git+https://git.lerch.org/lobo/chawan-flake.git";
+    xdgzvm.url = "git+https://git.lerch.org/lobo/zvm-flake.git";
   };
-  outputs = { self, nixpkgs, lerchclipboard, lerchchawan }:
+  outputs = { self, nixpkgs, lerchclipboard, lerchchawan, xdgzvm }:
     let
       supportedSystems = [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ];
       # Helper function to generate an attrset '{ x86_64-linux = f "x86_64-linux"; ... }'.
@@ -118,6 +119,7 @@
           zellij        # terminal multiplexer
           zip           # zip utility
           zstd          # zstd compression algorithm
+          xdgzvm.packages.${system}.default # zvm
         ] ++ additionalPackages ++ hostConfig.hostPackages;
         pathsToLink = [ "/share/man" "/share/doc" "/bin" "/lib" ];
         extraOutputsToInstall = [ "man" "doc" ];

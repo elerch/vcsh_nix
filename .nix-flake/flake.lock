@@ -18,6 +18,24 @@
         "type": "github"
       }
     },
+    "flake-utils_2": {
+      "inputs": {
+        "systems": "systems_2"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "lerchchawan": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -88,11 +106,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1737003892,
-        "narHash": "sha256-RCzJE9wKByLCXmRBp+z8LK9EgdW+K+W/DXnJS4S/NVo=",
+        "lastModified": 1737110817,
+        "narHash": "sha256-DSenga8XjPaUV5KUFW/i3rNkN7jm9XmguW+qQ1ZJTR4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "ae06b9c2d83cb5c8b12d7d0e32692e93d1379713",
+        "rev": "041c867bad68dfe34b78b2813028a2e2ea70a23c",
         "type": "github"
       },
       "original": {
@@ -101,11 +119,28 @@
         "type": "indirect"
       }
     },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1737062831,
+        "narHash": "sha256-Tbk1MZbtV2s5aG+iM99U8FqwxU/YNArMcWAv6clcsBc=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5df43628fdf08d642be8ba5b3625a6c70731c19c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "lerchchawan": "lerchchawan",
         "lerchclipboard": "lerchclipboard",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_3",
+        "xdgzvm": "xdgzvm"
       }
     },
     "systems": {
@@ -121,6 +156,40 @@
         "owner": "nix-systems",
         "repo": "default",
         "type": "github"
+      }
+    },
+    "systems_2": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "xdgzvm": {
+      "inputs": {
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1737323831,
+        "narHash": "sha256-G1pJE3RtiWoDqMR9CPXMkyo1NXAV7iTkVGe8hh01Ldk=",
+        "ref": "refs/heads/master",
+        "rev": "22dd035a2d1be35522e41a6117b49e007e7031d8",
+        "revCount": 2,
+        "type": "git",
+        "url": "https://git.lerch.org/lobo/zvm-flake.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.lerch.org/lobo/zvm-flake.git"
       }
     }
   },
