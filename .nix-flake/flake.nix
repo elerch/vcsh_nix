@@ -1,12 +1,11 @@
 {
   inputs = {
     nixpkgs.url = "nixpkgs/nixpkgs-unstable";
-    lerchclipboard.url = "git+https://git.lerch.org/lobo/clipboard-flake.git";
     lerchchawan.url = "git+https://git.lerch.org/lobo/chawan-flake.git";
     lerchghostty.url = "git+https://git.lerch.org/lobo/ghostty-flake.git";
     xdgzvm.url = "git+https://git.lerch.org/lobo/zvm-flake.git";
   };
-  outputs = { self, nixpkgs, lerchclipboard, lerchchawan, lerchghostty, xdgzvm }:
+  outputs = { self, nixpkgs,lerchchawan, lerchghostty, xdgzvm }:
     let
       supportedSystems = [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ];
       # Helper function to generate an attrset '{ x86_64-linux = f "x86_64-linux"; ... }'.
@@ -64,7 +63,6 @@
           yt-dlp        # download video from the Internet
 
           # Personal stuff, using X
-          lerchclipboard.packages.${system}.default
           lerchghostty.packages.${system}.default
 
           # It's complicated...
