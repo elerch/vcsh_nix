@@ -61,6 +61,7 @@
           # vlc          # video player - use flatpak instead
           xclip         # manage x clipboard
           yt-dlp        # download video from the Internet
+          meld          # diff/merge tool
 
           # Personal stuff, using X
           lerchghostty.packages.${system}.default
