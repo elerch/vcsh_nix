@@ -86,11 +86,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1739863612,
-        "narHash": "sha256-UbtgxplOhFcyjBcNbTVO8+HUHAl/WXFDOb6LvqShiZo=",
+        "lastModified": 1742800061,
+        "narHash": "sha256-oDJGK1UMArK52vcW9S5S2apeec4rbfNELgc50LqiPNs=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "632f04521e847173c54fa72973ec6c39a371211c",
+        "rev": "1750f3c1c89488e2ffdd47cab9d05454dddfb734",
         "type": "github"
       },
       "original": {
@@ -101,11 +101,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1737062831,
-        "narHash": "sha256-Tbk1MZbtV2s5aG+iM99U8FqwxU/YNArMcWAv6clcsBc=",
+        "lastModified": 1742669843,
+        "narHash": "sha256-G5n+FOXLXcRx+3hCJ6Rt6ZQyF1zqQ0DL0sWAMn2Nk0w=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5df43628fdf08d642be8ba5b3625a6c70731c19c",
+        "rev": "1e5b653dff12029333a6546c11e108ede13052eb",
         "type": "github"
       },
       "original": {
@@ -144,11 +144,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1737323831,
-        "narHash": "sha256-G1pJE3RtiWoDqMR9CPXMkyo1NXAV7iTkVGe8hh01Ldk=",
+        "lastModified": 1742916612,
+        "narHash": "sha256-tyAwEXoaBVsSTO4zUfWFrFQ0JqYOXE6aIpovQZFHACg=",
         "ref": "refs/heads/master",
-        "rev": "22dd035a2d1be35522e41a6117b49e007e7031d8",
-        "revCount": 2,
+        "rev": "0e74fe220ff6fd14369e6af557cc086ba1d6d0c9",
+        "revCount": 3,
         "type": "git",
         "url": "https://git.lerch.org/lobo/zvm-flake.git"
       },
