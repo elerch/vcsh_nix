@@ -79,6 +79,7 @@
       pkgs.buildEnv {
         name = "homepkgs";
         paths = with pkgs; [
+          abduco        # lightweight terminal session management
           any-nix-shell # any-nix-shell
           bat           # cat, with colorization
           btop          # better top
