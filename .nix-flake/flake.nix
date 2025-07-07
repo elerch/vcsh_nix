@@ -84,7 +84,8 @@
           btop          # better top
           binutils      # gnu binary utils (ld, strip, objdump, strings, etc.
           bloaty        # bloaty mcbloatface - shows bloat in executables
-          lerchchawan.packages.${system}.default # Chawan appimage
+          # Only include lerchchawan for x86_64-linux
+          (if system == "x86_64-linux" then lerchchawan.packages.${system}.default else null) # Chawan appimage
           cloudflared   # create tunnels to cloudflare
           cosign        # sign container images
           delta         # fancy diff
