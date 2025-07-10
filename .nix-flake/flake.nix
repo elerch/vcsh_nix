@@ -86,7 +86,6 @@
           bloaty        # bloaty mcbloatface - shows bloat in executables
           # Only include lerchchawan for x86_64-linux
           (if system == "x86_64-linux" then lerchchawan.packages.${system}.default else null) # Chawan appimage
-          cloudflared   # create tunnels to cloudflare
           cosign        # sign container images
           delta         # fancy diff
           direnv        # direnv
