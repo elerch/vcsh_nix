@@ -42,7 +42,6 @@
           gdb           # gnu debugger
           imagemagick   # image manipulation
           khard         # interface to carddav data
-          lsix          # image thumbnails in terminal via six
           mitmproxy     # man in the middle proxy - proxy all the things
           fastfetch     # system information
           neomutt       # mutt for a new generation
@@ -84,6 +83,7 @@
           btop          # better top
           binutils      # gnu binary utils (ld, strip, objdump, strings, etc.
           bloaty        # bloaty mcbloatface - shows bloat in executables
+          chafa         # images in the terminal
           # Only include lerchchawan for x86_64-linux
           (if system == "x86_64-linux" then lerchchawan.packages.${system}.default else null) # Chawan appimage
           cosign        # sign container images
