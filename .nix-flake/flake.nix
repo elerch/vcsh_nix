@@ -38,6 +38,7 @@
           dunst         # notification daemon
           extract_url   # extracts urls from text. A bit buggy
           feh           # image viewer - good for background images
+          fira-code     # monospace font
           ffmpeg        # video manipulation
           gdb           # gnu debugger
           imagemagick   # image manipulation
@@ -122,7 +123,7 @@
           zip           # zip utility
           zstd          # zstd compression algorithm
         ] ++ additionalPackages ++ hostConfig.hostPackages;
-        pathsToLink = [ "/share/man" "/share/doc" "/bin" "/lib" ];
+        pathsToLink = [ "/share/man" "/share/doc" "/bin" "/lib" "/share/fonts" ];
         extraOutputsToInstall = [ "man" "doc" ];
       });
   };
