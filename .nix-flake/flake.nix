@@ -61,6 +61,9 @@
           xclip         # manage x clipboard
           yt-dlp        # download video from the Internet
           meld          # diff/merge tool
+          yazi          # tui file manager
+          mpv           # yazi uses this video player by default, bypassing xdg-open
+
 
           # Personal stuff, using X
           lerchghostty.packages.${system}.default
@@ -105,6 +108,7 @@
           mold          # multi-threaded linker
           neovim        # neovim
           nettools      # ifconfig, netstat and the like
+          # (nnn.override { withNerdIcons = true; }) # nnn file manager with nerd icons (lightweight but lots of config)
           netcat        # netcat provides nc
           nmap          # nmap port scanning, etc
           p7zip         # 7z executable
@@ -116,6 +120,7 @@
           tor           # Access tor network (cli - not the browser)
           tree          # file listings as a tree
           unzip         # unzip utility
+          viu           # images in the terminal
           #wasmtime      # run wasm (wasi) binaries - does not seem to work properly
           websocat      # web sockets from command line
           yaml2json     # convert yaml to json
