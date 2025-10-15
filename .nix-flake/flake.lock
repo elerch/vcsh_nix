@@ -23,11 +23,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1759433996,
-        "narHash": "sha256-ll5TZfi0Pd2SHIqf5Y4dtaZEm8l0kkr5XtZTePxuJj0=",
+        "lastModified": 1760548193,
+        "narHash": "sha256-qDhPhNvFjWQ8fv1t6x1nkGvqy1iGFWZiv/+E4LpQVDM=",
         "ref": "refs/heads/master",
-        "rev": "a9adf280da1c35bcbb5d8f26635b1cc5b9c89dd4",
-        "revCount": 3,
+        "rev": "5031a2eab790d5734fc726ce570a6aa3c673887d",
+        "revCount": 4,
         "type": "git",
         "url": "https://git.lerch.org/lobo/ghostty-flake.git"
       },
@@ -68,11 +68,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1759386674,
-        "narHash": "sha256-wg1Lz/1FC5Q13R+mM5a2oTV9TA9L/CHHTm3/PiLayfA=",
+        "lastModified": 1760504863,
+        "narHash": "sha256-h13YFQMi91nXkkRoJMIfezorz5SbD6849jw5L0fjK4I=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "625ad6366178f03acd79f9e3822606dd7985b657",
+        "rev": "82c2e0d6dde50b17ae366d2aa36f224dc19af469",
         "type": "github"
       },
       "original": {
