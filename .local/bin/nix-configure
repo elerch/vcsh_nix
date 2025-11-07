@@ -4,6 +4,33 @@
 # Problem 2 from the post. Does not apply
 # export NIXPKGS_ALLOW_UNFREE=1
 
+install_nix() {
+  arch=$(uname -m)
+  case "$arch" in
+    x86_64) arch="x86_64-linux" ;;
+    aarch64|arm64) arch="aarch64-linux" ;;
+    *) echo "Unsupported architecture: $arch" >&2; return 1 ;;
+  esac
+
+  for version in $(curl -sL https://hydra.nixos.org/project/nix | grep -o 'jobset/nix/[^"]*"' | cut -d/ -f3 | cut -d'"' -f1 | grep -E '^[a-z]+-[0-9]' | sort -Vru); do
+    if curl -sL "https://hydra.nixos.org/job/nix/$version/buildStatic.nix-cli.${arch}/latest" | grep -q "Succeeded"; then
+      break
+    fi
+    version=""
+  done
+
+  [ -z "$version" ] && echo "Failed to find successful nix build" >&2 && return 1
+
+  url="https://hydra.nixos.org/job/nix/${version}/buildStatic.nix-cli.${arch}/latest/download-by-type/file/binary-dist"
+
+  curl -sL "$url" > "$HOME/.local/bin/nix" && chmod +x "$HOME/.local/bin/nix"
+  echo "Installed nix $version (${arch}) to $HOME/.local/bin/nix"
+}
+
+if ! command -v nix >/dev/null 2>&1; then
+  install_nix || exit 1
+fi
+
 if [ -z "$1" ] && [ ! -r "$HOME/.nix-flake/host-config.nix" ]; then
   echo "No arguments specified and no host config, installing only light command line tools"
   echo "to install large packages and those dependent on a window environment"
