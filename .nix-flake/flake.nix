@@ -96,6 +96,7 @@
           eza           # a better ls
           firejail      # provides jailing for processes
           git           # make sure we get the git version we want
+          gitui         # TUI for git
           gron          # json transformation so you can grep it
           hadolint      # Dockerfile linter
           htop          # htop, a better top (concerned btop won't work everywhere)
