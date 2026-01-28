@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "nixpkgs/master";
     lerchchawan.url = "git+https://git.lerch.org/lobo/chawan-flake.git";
     lerchghostty.url = "git+https://git.lerch.org/lobo/ghostty-flake.git";
   };
@@ -46,17 +46,17 @@
           mitmproxy     # man in the middle proxy - proxy all the things
           fastfetch     # system information
           neomutt       # mutt for a new generation
+          opencode      # TUI for agent-based coding
           pandoc        # swiss army knife of document translation
           playerctl     # media controls
           qemu          # virtual machine
           maim          # X screenshot utility
-          mlterm        # terminal emulator
           ntfy-sh       # ntfy client/server
           rclone        # clone files to/from cloud providers
           rofi          # Window switcher/dmenu replacement
           screen        # screen manager
           syncthing     # syncthing syncs all the things
-          toot          # mastodon cli/tli interface
+          # toot          # mastodon cli/tli interface. This is breaking on 2026-01-28 due to python3.13-term-image build failure
           # vlc          # video player - use flatpak instead
           xclip         # manage x clipboard
           yt-dlp        # download video from the Internet
