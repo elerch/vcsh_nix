@@ -123,6 +123,7 @@
           unzip         # unzip utility
           viu           # images in the terminal
           #wasmtime      # run wasm (wasi) binaries - does not seem to work properly
+          watchexec     # watches for file changes, then execs stuff
           websocat      # web sockets from command line
           yaml2json     # convert yaml to json
           zellij        # terminal multiplexer
