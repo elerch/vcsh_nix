@@ -120,6 +120,7 @@
           sqlite        # sqlite database
           tor           # Access tor network (cli - not the browser)
           tree          # file listings as a tree
+          tree-sitter   # Tree sitter cli needed for neovim treesitter plugin
           unzip         # unzip utility
           viu           # images in the terminal
           #wasmtime      # run wasm (wasi) binaries - does not seem to work properly
