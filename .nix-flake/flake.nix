@@ -3,8 +3,11 @@
     nixpkgs.url = "nixpkgs/master";
     lerchchawan.url = "git+https://git.lerch.org/lobo/chawan-flake.git";
     lerchghostty.url = "git+https://git.lerch.org/lobo/ghostty-flake.git";
+    lerchsrflsp.url = "git+https://git.lerch.org/lobo/srf-lsp.git";
+    # Reuse the nixpkgs above rather than instantiating another one.
+    lerchsrflsp.inputs.nixpkgs.follows = "nixpkgs";
   };
-  outputs = { self, nixpkgs,lerchchawan, lerchghostty }:
+  outputs = { self, nixpkgs,lerchchawan, lerchghostty, lerchsrflsp }:
     let
       supportedSystems = [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ];
       # Helper function to generate an attrset '{ x86_64-linux = f "x86_64-linux"; ... }'.
@@ -43,11 +46,12 @@
           gdb           # gnu debugger
           imagemagick   # image manipulation
           khard         # interface to carddav data
-          mitmproxy     # man in the middle proxy - proxy all the things
+          #mitmproxy     # man in the middle proxy - proxy all the things (use through mise)
           fastfetch     # system information
           neomutt       # mutt for a new generation
           opencode      # TUI for agent-based coding
           pandoc        # swiss army knife of document translation
+          pass          # basic password manager (used as backend for aws-vault)
           playerctl     # media controls
           qemu          # virtual machine
           maim          # X screenshot utility
@@ -81,7 +85,6 @@
       pkgs.buildEnv {
         name = "homepkgs";
         paths = with pkgs; [
-          abduco        # lightweight terminal session management
           any-nix-shell # any-nix-shell
           bat           # cat, with colorization
           btop          # better top
@@ -99,11 +102,12 @@
           lazygit       # TUI for git
           gron          # json transformation so you can grep it
           hadolint      # Dockerfile linter
+          herdr         # terminal multiplexer for AI
           htop          # htop, a better top (concerned btop won't work everywhere)
-          hyperfine     # benchmarking utility
+          #hyperfine     # benchmarking utility (install/use through mise)
           inotify-tools # command line access to inotify interface
           jless         # less for json
-          jq            # json parser
+          jq            # json parser (don't comment - used by lots of things)
           khal          # command line calendar stuff
           mise          # development multi-tool version manager
           mold          # multi-threaded linker
@@ -118,6 +122,7 @@
           rsync         # sync files from one place to another through CLI
           shellcheck    # shell script linter
           sqlite        # sqlite database
+          lerchsrflsp.packages.${system}.default # SRF language server
           tor           # Access tor network (cli - not the browser)
           tree          # file listings as a tree
           tree-sitter   # Tree sitter cli needed for neovim treesitter plugin

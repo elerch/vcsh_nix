@@ -36,6 +36,26 @@
         "url": "https://git.lerch.org/lobo/ghostty-flake.git"
       }
     },
+    "lerchsrflsp": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788305011,
+        "narHash": "sha256-rpCHkdBtpWs4du3WS8WVVfgod19ec1waSWRjSrwKP6k=",
+        "ref": "refs/heads/master",
+        "rev": "16bc78773801a77e36034c6cdf89d82767693b17",
+        "revCount": 4,
+        "type": "git",
+        "url": "https://git.lerch.org/lobo/srf-lsp.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.lerch.org/lobo/srf-lsp.git"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1736344531,
@@ -68,11 +88,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1781217095,
-        "narHash": "sha256-TIZPPeDC34z4cAHY9/q6ZpQCwUr2FaUG36wu00h4Dr0=",
+        "lastModified": 1788303326,
+        "narHash": "sha256-LHQFfZrRUk4QlxbKwBOhIbOO6MBlY6bIgHtrZX2iAvk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "f165471026e99589ff985895375101691db8c66e",
+        "rev": "6b9ce505e512688311fe820fc6493f39fe78dbc3",
         "type": "github"
       },
       "original": {
@@ -85,6 +105,7 @@
       "inputs": {
         "lerchchawan": "lerchchawan",
         "lerchghostty": "lerchghostty",
+        "lerchsrflsp": "lerchsrflsp",
         "nixpkgs": "nixpkgs_3"
       }
     }
