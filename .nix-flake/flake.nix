@@ -6,8 +6,10 @@
     lerchsrflsp.url = "git+https://git.lerch.org/lobo/srf-lsp.git";
     # Reuse the nixpkgs above rather than instantiating another one.
     lerchsrflsp.inputs.nixpkgs.follows = "nixpkgs";
+    lerchtally.url = "git+https://git.lerch.org/lobo/tally.git";
+    lerchtally.inputs.nixpkgs.follows = "nixpkgs";
   };
-  outputs = { self, nixpkgs,lerchchawan, lerchghostty, lerchsrflsp }:
+  outputs = { self, nixpkgs,lerchchawan, lerchghostty, lerchsrflsp, lerchtally }:
     let
       supportedSystems = [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ];
       # Helper function to generate an attrset '{ x86_64-linux = f "x86_64-linux"; ... }'.
@@ -123,6 +125,7 @@
           shellcheck    # shell script linter
           sqlite        # sqlite database
           lerchsrflsp.packages.${system}.default # SRF language server
+          lerchtally.packages.${system}.default # tally calculator (CLI and TUI)
           tor           # Access tor network (cli - not the browser)
           tree          # file listings as a tree
           tree-sitter   # Tree sitter cli needed for neovim treesitter plugin

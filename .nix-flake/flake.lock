@@ -56,6 +56,26 @@
         "url": "https://git.lerch.org/lobo/srf-lsp.git"
       }
     },
+    "lerchtally": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791151276,
+        "narHash": "sha256-aevLhvNzJEUhOFpPnrH1rnJhwOA+lYPDUOT9mroXbkg=",
+        "ref": "refs/heads/master",
+        "rev": "3c9ec72b882e42548a5373f204e27e0cfe9cc495",
+        "revCount": 66,
+        "type": "git",
+        "url": "https://git.lerch.org/lobo/tally.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.lerch.org/lobo/tally.git"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1736344531,
@@ -106,6 +126,7 @@
         "lerchchawan": "lerchchawan",
         "lerchghostty": "lerchghostty",
         "lerchsrflsp": "lerchsrflsp",
+        "lerchtally": "lerchtally",
         "nixpkgs": "nixpkgs_3"
       }
     }
