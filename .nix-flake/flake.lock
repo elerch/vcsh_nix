@@ -23,11 +23,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1773153905,
-        "narHash": "sha256-KlTaNroieYEHhBGtvngc/IiOZGJ6cNwVBr0Dey5ir/k=",
+        "lastModified": 1793342646,
+        "narHash": "sha256-6cvXQEVw59xURYYeInx/8r8yamG9T+dPhc7skRnipdM=",
         "ref": "refs/heads/master",
-        "rev": "1b4a5ef7c1ae2ab7e0e95c9f8b67f67873bd0297",
-        "revCount": 5,
+        "rev": "18a6f1402ff7f9f9dae77e3bd7be2b8d5cc2ead4",
+        "revCount": 6,
         "type": "git",
         "url": "https://git.lerch.org/lobo/ghostty-flake.git"
       },
@@ -43,11 +43,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788305011,
-        "narHash": "sha256-rpCHkdBtpWs4du3WS8WVVfgod19ec1waSWRjSrwKP6k=",
+        "lastModified": 1788469104,
+        "narHash": "sha256-mNS/S8uV8LOdILL2qVOqvr+dNWLlqDt744+WGMnl9XQ=",
         "ref": "refs/heads/master",
-        "rev": "16bc78773801a77e36034c6cdf89d82767693b17",
-        "revCount": 4,
+        "rev": "eb6cc1f388098d2a0500860fff095e065d8f1adc",
+        "revCount": 8,
         "type": "git",
         "url": "https://git.lerch.org/lobo/srf-lsp.git"
       },
@@ -63,11 +63,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791151276,
-        "narHash": "sha256-aevLhvNzJEUhOFpPnrH1rnJhwOA+lYPDUOT9mroXbkg=",
+        "lastModified": 1791991395,
+        "narHash": "sha256-jw0U9Zl0ESQ+MQwvXZs3/e346JJbodIc5uUSTNZs0+s=",
         "ref": "refs/heads/master",
-        "rev": "3c9ec72b882e42548a5373f204e27e0cfe9cc495",
-        "revCount": 66,
+        "rev": "850378840bd0a358c9ed7b2f375a623b04acf61f",
+        "revCount": 73,
         "type": "git",
         "url": "https://git.lerch.org/lobo/tally.git"
       },
@@ -108,11 +108,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1788303326,
-        "narHash": "sha256-LHQFfZrRUk4QlxbKwBOhIbOO6MBlY6bIgHtrZX2iAvk=",
+        "lastModified": 1792121332,
+        "narHash": "sha256-7NohVb8h34kIg0JKyZSOi+r9TENL2rmQavySjdziYqc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "6b9ce505e512688311fe820fc6493f39fe78dbc3",
+        "rev": "3de7dd8c8ab6c249fc49985bfa53904d7ab696ba",
         "type": "github"
       },
       "original": {
