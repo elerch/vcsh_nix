@@ -22,13 +22,21 @@
     {
     defaultPackage = forAllSystems (system:
       let
-        pkgs = nixpkgs.legacyPackages.${system};
+        # Unfree packages are opt-in per host via hostConfig.allowUnfree, a
+        # list of package names. hostConfig and pkgs reference each other,
+        # which is fine because the predicate is only forced lazily.
+        pkgs = import nixpkgs {
+          inherit system;
+          config.allowUnfreePredicate = pkg:
+            builtins.elem (nixpkgs.lib.getName pkg) (hostConfig.allowUnfree or []);
+        };
 
         hostConfig = if builtins.pathExists ./host-config.nix
           then import ./host-config.nix { pkgs = pkgs; }
           else {
             hostPackages = [];
             basePackages = "";
+            allowUnfree = [];
           };
 
         includeGraphical = builtins.getEnv "NIX_CONFIGURE_FULL" == "1" ||
